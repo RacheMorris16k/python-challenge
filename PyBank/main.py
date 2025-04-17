@@ -44,10 +44,10 @@ print(f'Greatest Decrease in Profits: {min_change_month} (${int(min_change)})')
 lines = [
     "Financial Analysis",
     "__________________________"
-     f"Total Months:{total_months}"
+     f"Total Months:{total_months}",
      f"Total: ${net_total}",
-     f"Average Change: ${average_change:.2f}"
-     f"Greatest Increase in Profits:{max_change_month} (${int(max_change)})"
+     f"Average Change: ${average_change:.2f}",
+     f"Greatest Increase in Profits:{max_change_month} (${int(max_change)})",
      f'Greatest Decrease in Profits: {min_change_month} (${int(min_change)})'
 ]
 
