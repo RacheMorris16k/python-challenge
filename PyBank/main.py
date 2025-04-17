@@ -1,48 +1,41 @@
 import csv
-import os
-
 import pandas as pd
+df = pd.read_csv (r'C:\Users\rache\python-challenge-1\PyBank\Resources\budget_data.csv')
 
+#Load the CSV File
+import os
+file_path = os.path.join 
+"('C:''Users','rache','python-challenge-1',PyBank','Resources','budget_data.csv')"
 
-#capture path in variable
+#Total number of months
+total_months = df.shape[0]
 
-budget_csv=os.path.join('..','PyBank','Resources','budget_data.csv')
+print(f"Total Months:{total_months}")
 
+#Net total amount of Profit/Losses
+net_total = df['Profit/Losses'].sum()
+print(f"Net Totat: ${net_total}")
 
-#use pandas to read data
+#Calculate month-month changes
+df['Change'] = df['Profit/Losses'].diff()
+#Compute the average of those changes(skin the first Nan)
+average_change = df['Change'].mean()
 
-df=pd.read_csv(budget_csv)
+print(f"Average Change: ${average_change:.2f}")
 
-#Count number of months
+#Greatest Increase in Profits
+max_change = df['Change'].max()
+max_change_month = df.loc[df['Change'].idxmin(),'Date']
 
-number_of_months=len(df)
+#Greatest Decrease in Profits
+min_change = df['Change'].min()
+min_change_month = df.loc[df['Change'].idxmin(),'Date']
 
-print("Total months: ",number_of_months)
-
-
-#Get total amount of profit/losses
-
-total_amount=sum(df["Profit/Losses"])
-
-print("Total: ",total_amount)
-
-
-#Calculate avg change profit/losses
-
-average_change=total_amount/number_of_months
-
-print("Average Change: ",average_change)
-
-
-#Calculate avg change profit/losses
-
-greatest_increase=max(df["Profit/Losses"])
-
-print("Greatest Increase in Profit: ",greatest_increase)
-
-
-#Calculate avg change profit/losses
-
-greatest_decrease=min(df["Profit/Losses"])
-
-print("Greatest Decrease in Profit: ",greatest_decrease)
+#Print the analysis
+print('Financial Analysis')
+print('________________________')
+print(f'Total Months:{total_months}')
+print(f'Total:${net_total}')
+print(f"Average Change: ${average_change:.2f}")
+print(f"Greatest Increase in Profits:{max_change_month} (${int(max_change)})")
+print(f'Greatest Decrease in Profits: {min_change_month} (${int(min_change)})')
