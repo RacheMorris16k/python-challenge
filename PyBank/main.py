@@ -39,3 +39,24 @@ print(f'Total:${net_total}')
 print(f"Average Change: ${average_change:.2f}")
 print(f"Greatest Increase in Profits:{max_change_month} (${int(max_change)})")
 print(f'Greatest Decrease in Profits: {min_change_month} (${int(min_change)})')
+
+#Buld output lines
+lines = [
+    "Financial Analysis",
+    "__________________________"
+     f"Total Months:{total_months}"
+     f"Total: ${net_total}",
+     f"Average Change: ${average_change:.2f}"
+     f"Greatest Increase in Profits:{max_change_month} (${int(max_change)})"
+    f'Greatest Decrease in Profits: {min_change_month} (${int(min_change)})'
+]
+
+# Write to text file
+out_path = os.path.join (r'c:\Users\rache\python-challenge-1\PyBank\analysis', 'budget_analysis.txt')
+os.makedirs(os.path.dirname(out_path), exist_ok=True)
+
+#   Write to text file
+with open(out_path, 'w') as f:
+    for line in lines:
+        f.write(line + '\n')
+print(f'Results written to {out_path}')
