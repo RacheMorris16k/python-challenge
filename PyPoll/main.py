@@ -31,3 +31,31 @@ vote_percentages = (candidates_counts / total_votes) * 100
 for cand in candidates_counts.index:
     print(f"{cand}: {vote_percentages[cand]:.3f}% ({candidates_counts[cand]})")
 
+#Determine the winner(candidate with the most votes)
+winner = candidates_counts.idxmax()
+
+print(f"Winner: {winner}")
+
+#Output lines
+lines = [
+    "Election Results",
+    "_________________________", 
+    f"Total Votes: {total_votes}",
+    "_________________________",
+]
+for cand in candidates_counts.index:
+    lines.append(f"{cand}: {vote_percentages[cand]:.3f}% ({candidates_counts[cand]})")
+    lines +=[
+        "_______________________",
+        f"Winner:{winner}",
+        "________________________"
+    ]
+
+    #Write to text file
+    out_path = os.path.join(r'C:\Users\rache\python-challenge-1\PyPoll\analysis', 'election_analysis.txt')
+    os.makedirs(os.path.dirname(out_path),exist_ok=True)
+
+    with open(out_path, 'w') as f:
+        f.write('\n'.join(lines))
+
+print(f"Results written to {out_path}")
