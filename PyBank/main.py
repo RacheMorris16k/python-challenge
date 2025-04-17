@@ -48,7 +48,7 @@ lines = [
      f"Total: ${net_total}",
      f"Average Change: ${average_change:.2f}"
      f"Greatest Increase in Profits:{max_change_month} (${int(max_change)})"
-    f'Greatest Decrease in Profits: {min_change_month} (${int(min_change)})'
+     f'Greatest Decrease in Profits: {min_change_month} (${int(min_change)})'
 ]
 
 # Write to text file
