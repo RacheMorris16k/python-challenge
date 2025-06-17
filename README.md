@@ -38,5 +38,6 @@ Navigate to the project folder (e.g., PyBank or PyPoll)
 
 ```bash
 python main.py
-Created by Rache Morris
+
+#Created by Rache Morris
 
