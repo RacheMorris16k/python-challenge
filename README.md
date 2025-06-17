@@ -1,26 +1,42 @@
-I created a Python script based off an assignment given to me by my Data Analysis and Visualization Bootcamp. I created a Python script that analyzes the [budget_data.csv]data.
-PyBank
-I calculated the following:
-The total number of months included in the dataset
+# Python Challenge
 
-The net total amount of "Profit/Losses" over the entire period
+## 📊 Overview
+This project contains solutions for basic to intermediate Python data analysis challenges. These exercises helped build my foundational skills in data wrangling, file handling, and logic development using Python.
 
-The changes in "Profit/Losses" over the entire period, and then the average of those changes
+## 🧠 What I Learned
+- Reading and writing data using Python
+- Parsing and analyzing `.csv` files
+- Using Python loops, conditionals, and functions
+- Handling file paths and working with text files
+- Writing clean, readable, and modular code
 
-The greatest increase in profits (date and amount) over the entire period
+## 📁 Project Structure
+python-challenge/
+├── PyBank/
+│ ├── main.py
+│ └── Resources/
+│ └── budget_data.csv
+├── PyPoll/
+│ ├── main.py
+│ └── Resources/
+│ └── election_data.csv
 
-The greatest decrease in profits (date and amount) over the entire period
-Then I printed the results on a text file named [budget_analysis.txt]
+## 🛠️ Tools & Technologies
+- Python 3.x
+- Jupyter Notebooks (optional for testing)
+- CSV file handling
+- Basic terminal and file operations
 
-PyPoll
-Next I was given a set of poll data called [election_data.csv] and was tasked with calculating the following:
-The total number of votes cast
+## 📝 How to Run
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/RacheMorris16k/python-challenge.git
+   cd python-challenge
+Navigate to the project folder (e.g., PyBank or PyPoll)
 
-A complete list of candidates who received votes
+2.Run the script
 
-The percentage of votes each candidate won
+```bash
+python main.py
+Created by Rache Morris
 
-The total number of votes each candidate won
-
-The winner of the election based on popular vote
-Then I printed the final results on a text file name [election_analysis.txt]
