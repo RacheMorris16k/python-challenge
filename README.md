@@ -35,8 +35,7 @@ python-challenge/
 Navigate to the project folder (e.g., PyBank or PyPoll)
 
 2.Run the script
-
-```bash
-python main.py
+   ```bash
+   python main.py
 
 Created by Rache Morris
